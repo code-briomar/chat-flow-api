@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.sparkjava:spark-core:2.9.4'
+    // https://mvnrepository.com/artifact/commons-fileupload/commons-fileupload
+    implementation 'commons-fileupload:commons-fileupload:1.5'
+    // https://mvnrepository.com/artifact/commons-io/commons-io
+    implementation 'commons-io:commons-io:2.16.1'
+    implementation 'com.sparkjava:spark-core:2.9.3'
+    // https://mvnrepository.com/artifact/net.sourceforge.tess4j/tess4j
+    implementation 'net.sourceforge.tess4j:tess4j:5.11.0'
+
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+
+}
+
+test {
+    useJUnitPlatform()
+}
